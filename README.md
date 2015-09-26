@@ -14,10 +14,10 @@ sudo docker logs kippo
 sudo docker logs -f --tail 10 kippo 
 ```
 
-##### Also you may use volume mounting for host user with uid:gid 1000:1000
+##### Also you may use volume mounting for host user with uid:gid 1001:1001
 ```sh
 sudo mkdir -p /home/kippo/log/tty
-sudo chown -R 1000:1000 /home/kippo
+sudo chown -R 1001:1001 /home/kippo
 sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d \
    --name kippo vensder/alpine-kippo
 ```
